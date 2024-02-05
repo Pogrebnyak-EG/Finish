@@ -1,0 +1,81 @@
+1.1
+git clone
+
+1.2. Удаленные ветки
+git commit
+git checkout o/main
+git commit
+
+1.3. Git fetch
+
+1.4.Git pull
+
+1.5.Коллективная работа
+git clone
+git fakeTeamwork main 2
+git commit
+git pull
+
+1.6.Git push
+git commit
+git commit
+git push
+
+1.7. Расхождение в истории
+git clone
+git fakeTeamwork
+git commit -m "коммент"
+git pull --rebase
+git push
+
+1.8.Заблокированная ветвь main
+git reset --hard o/main
+git checkout -b feature C2
+git push origin feature
+
+Через origin – к звёздам. Продвинутое использование Git Remotes
+2.1 Слияние фича-бранчей (веток)
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 main
+git pull --rebase
+git push
+
+2.2 Merge? Нет, нет, спасибо
+git checkout main
+git pull
+git merge side1
+git merge side2
+git merge side3
+git push
+
+2.3 Удалённые-отслеживаемые ветки
+git checkout -b side o/main
+git commit
+git pull --rebase
+git push
+
+2.4 Аргументы команды Push
+git push origin main
+git push origin foo
+
+2.5 Подробности аргумента <пункт назначения>
+git push origin main~1:foo
+git push origin foo:main
+
+2.6 Аргументы git fetch
+git fetch origin main~1:foo
+git fetch origin foo:main
+git checkout foo
+git merge main
+
+2.7 Странный <источник>
+git push origin :foo
+git fetch origin :bar
+
+2.8 Аргументы для pull
+git pull origin bar:foo
+git pull origin main:side
+
+
+
